@@ -14,6 +14,14 @@ module.exports = function (grunt) {
                 }
             }
         },
+        copy: {
+            html: {
+                expand: true,
+                cwd: "html",
+                src: "**",
+                dest: "wwwroot/"
+            }
+        },
         uglify: {
             options: {
                 compress: false,
@@ -52,8 +60,8 @@ module.exports = function (grunt) {
 
         watch: {
             scripts: {
-                files: ['app/**/*.js', 'app/**/*.html', 'assets/css/*.less'],
-                tasks: ['uglify', 'html2js:app', 'less:development']
+                files: ['app/**/*.js', 'app/**/*.html', 'assets/css/*.less', 'html/**'],
+                tasks: ['uglify', 'html2js:app', 'less:development', 'copy']
             }
         },
 
@@ -70,6 +78,7 @@ module.exports = function (grunt) {
 
     grunt.registerTask('default', [
         'bower:install',
+        'copy',
         'uglify',
         'html2js:app',
         'watch']);
@@ -80,4 +89,5 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-html2js');
     grunt.loadNpmTasks('grunt-contrib-connect');
+    grunt.loadNpmTasks('grunt-contrib-copy');
 };
