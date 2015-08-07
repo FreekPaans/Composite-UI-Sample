@@ -12,6 +12,6 @@ The overall goal of these set of sample aims to show, in the simplest form possi
 
 ## Getting started
 
-Once you've cloned the repo, create directories `RegistryApi\wwwroot` and `OrdersApi\wwwroot`. These directories are empty so can't be in the git-repo, so need to be created manually on startup.
+Once you've cloned the repo, create directories `RegistryApi\wwwroot`, `OrdersApi\wwwroot` and `FrontEndWebUI\wwwroot\assets`. These directories are empty so can't be in the git-repo, so need to be created manually on startup.
 
 Then start `OrdersApi` and `RegistryApi` from Visual Studio and run the `Grunt -> Tasks -> connect task` from Task Runner Explorer. You can now access the app on http://localhost:9000.
