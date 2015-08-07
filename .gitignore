@@ -187,3 +187,5 @@ FontEndWebUI/wwwroot/app.js.map
 .lock.json
 project.lock.json
 /.vs
+/FrontEndWebUI/bower_components
+/FrontEndWebUI/bower_components
