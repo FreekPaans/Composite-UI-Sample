@@ -26,7 +26,8 @@ module.exports = function (grunt) {
             options: {
                 compress: false,
                 beautify: true,
-                sourceMap: true
+                sourceMap: true,
+                sourceMapIncludeSources: true
             },
             js: {
                 files: { 'wwwroot/app/app.js': ['app/app.js', 'app/**/*.js'] }
